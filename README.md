@@ -19,7 +19,6 @@ Don't forget to set the path of the keystore. The default path should change but
 ## Contributing 
 
 TODO
-App SHA1 Key
-Envoyer un mail à aidevig@gmail.com 
-Build Gradle
-Ameliorer pour aller plus loin
+If you want to get involved in the project, send a mail to aidevig@gmail.com 
+Don't forget to generate your keystore in other to built a release version of the app and test.
+You need to get the SHA1 of the app ... 
