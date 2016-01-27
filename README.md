@@ -47,10 +47,10 @@ In other to do so :
   * Create or use existing keystore.
   * Open terminal in android studio and type
   ````
-  keytool -list -v -keystore <your_keystore_name> -alias <your_alias_name>
+  keytool -list -v -keystore your_keystore_name -alias your_alias_name
   ````
-  Where : __<your_keystore_name>__ is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
-          __<your_alias_name>__ is alias that you assigned to the certificate when you created it.
+  Where : __your_keystore_name__ is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
+          __your_alias_name__ is alias that you assigned to the certificate when you created it.
   If prompted to type the password, then you should get your SHA1 fingerprints.
 * Use the android 
 
