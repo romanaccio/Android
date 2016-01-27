@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2016.
+ * Created by David Mugisha during the DTY Program
+ * Last Edited on 19/01/16 18:31
+ */
+
+// See build.gradle for an explanation of what this file is.
+
+apply plugin: 'com.android.library'
+
+// Check if the android plugin version supports unit testing.
+if (configurations.findByName("testCompile")) {
+  dependencies {
+    testCompile "junit:junit:4.10"
+    testCompile "org.mockito:mockito-core:1.9.5"
+    testCompile "org.robolectric:robolectric:3.0"
+  }
+}

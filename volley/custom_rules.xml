@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016.
+  ~ Created by David Mugisha during the DTY Program
+  ~ Last Edited on 19/01/16 18:31
+  -->
+
+<project name="volley-rules" default="help">
+
+  <!-- A rule to generate the JAR for inclusion in an Android
+       application. Output file will be bin/volley.jar -->
+  <target name="jar" depends="-compile">
+    <jar destfile="bin/volley.jar"
+         basedir="bin/classes" />
+  </target>
+</project>

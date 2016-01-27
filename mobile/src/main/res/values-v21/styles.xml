@@ -1,0 +1,14 @@
+<!--
+  ~ Copyright (c) 2016.
+  ~ Created by David Mugisha during the DTY Program
+  ~ Last Edited on 19/01/16 18:31
+  -->
+
+<resources>>
+            <style name="AppTheme.NoActionBar">
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+            <item name="android:statusBarColor">@android:color/transparent</item>
+        </style>
+</resources>

@@ -1,0 +1,10 @@
+<!--
+  ~ Copyright (c) 2016.
+  ~ Created by David Mugisha during the DTY Program
+  ~ Last Edited on 19/01/16 18:31
+  -->
+
+<resources>
+    <string name="app_name">GoSafe</string>
+    <string name="hello_world">Hello World!</string>
+</resources>
