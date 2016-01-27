@@ -49,8 +49,8 @@ In other to do so :
   ````
   keytool -list -v -keystore <your_keystore_name> -alias <your_alias_name>
   ````
-  Where : <your_keystore_name> is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
-          <your_alias_name> is alias that you assigned to the certificate when you created it.
+  Where : __<your_keystore_name>__ is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
+          __<your_alias_name>__ is alias that you assigned to the certificate when you created it.
   If prompted to type the password, then you should get your SHA1 fingerprints.
 * Use the android 
 
