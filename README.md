@@ -55,3 +55,7 @@ In other to do so :
 
 Checkout this [tutorial](http://android-er.blogspot.in/2012/12/displaying-sha1-certificate-fingerprint.html) about it.
 
+## License
+
+* [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
