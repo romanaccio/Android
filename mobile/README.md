@@ -33,6 +33,7 @@ You can check in File -> Project Structure if the Signing Config and the build t
 
 Checkout this [tutorial](http://android-er.blogspot.in/2012/12/displaying-sha1-certificate-fingerprint.html) about it.
 
+You can add a string ressource, i.e google_maps_release_key used in AndroidManifest to call the ask for the Maps Android API.
 
 ## User Features 
 
