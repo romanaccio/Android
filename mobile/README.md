@@ -18,7 +18,7 @@ You will need to get a key for the Maps Android API in the google developer [con
 In other to do so : 
 * Go the Google Maps Android API [here](https://developers.google.com/maps/documentation/android-api/) and get the key
 * Follow the instruction
-* Once they ask you to put the SHA1 fingerprint of your app, get the **release SHA1** in your android studio : 
+* Once they ask you to put the [SHA1](https://en.wikipedia.org/wiki/SHA-1) fingerprint of your app, get the **release SHA1** in your android studio : 
   * go to build -> generate signed APK
   * Create or use existing keystore.
   * Open terminal in android studio and type
