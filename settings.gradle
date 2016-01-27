@@ -4,4 +4,4 @@
  * Last Edited on 19/01/16 18:31
  */
 
-include ':mobile', ':wear', ':volley'
+include ':mobile', ':volley'
