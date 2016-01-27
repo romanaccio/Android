@@ -29,6 +29,8 @@ In other to do so :
           __your_alias_name__ is alias that you assigned to the certificate when you created it.
   If prompted to type the password, then you should get your SHA1 fingerprints.
 
+You can check in File -> Project Structure if the Signing Config and the build types are well set.
+
 Checkout this [tutorial](http://android-er.blogspot.in/2012/12/displaying-sha1-certificate-fingerprint.html) about it.
 
 
