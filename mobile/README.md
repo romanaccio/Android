@@ -10,8 +10,27 @@ The mobile app provides the necessary bridge between Aidevig device and the web 
 
 This use Gradle build system.
 First download the code by cloning this repository or downloading an archived snapshot.
-In Android Studio, use the "Import non-Android Studio project" or "Import Project" option. If prompted for a gradle configuration accept the default settings.
-Don't forget to set the path of the keystore. The default path should change but the file must be the same
+
+In Android Studio, use the **"Import non-Android Studio project"** or **"Import Project"** option. If prompted for a gradle configuration accept the default settings.
+Built for mobiles with Android 5.0 (Lollipop) at least.
+
+You will need to get a key for the Maps Android API in the google developer [console](https://console.developers.google.com).
+In other to do so : 
+* Go the Google Maps Android API [here](https://developers.google.com/maps/documentation/android-api/) and get the key
+* Follow the instruction
+* Once they ask you to put the SHA1 fingerprint of your app, get the **release SHA1** in your android studio : 
+  * go to build -> generate signed APK
+  * Create or use existing keystore.
+  * Open terminal in android studio and type
+  ````
+  keytool -list -v -keystore <your_keystore_name> -alias <your_alias_name>
+  ````
+  Where : <your_keystore_name> is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
+          <your_alias_name> is alias that you assigned to the certificate when you created it.
+  If prompted to type the password, then you should get your SHA1 fingerprint.
+
+Checkout this [tutorial](http://android-er.blogspot.in/2012/12/displaying-sha1-certificate-fingerprint.html) about it.
+
 
 ## User Features 
 
@@ -41,6 +60,8 @@ It also instantiates a [GoogleApiClient](https://developers.google.com/android/g
 This fragment displays a Google Map, with markers referencing alerts triggered from Aidevig bracelets. The layout is in the fragment_map.xml file.
 Hence, the HomeFragment.class extends fragment and implements GoogleMap.onMapReadyCallback and GoogleAPI callbacks.
 The [Google Map](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap?hl=en) is instantiated in onCreateView method, because here the in the onCreate it is too soon to get the map instance.
+Checkout the [Android Google Map API](https://developers.google.com/maps/documentation/android-api/) if you're not used to it.
+
 
 #### ProfileFragment
 
