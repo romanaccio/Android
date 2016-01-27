@@ -22,12 +22,12 @@ In other to do so :
   * go to build -> generate signed APK
   * Create or use existing keystore.
   * Open terminal in android studio and type
-  ````
-  keytool -list -v -keystore <your_keystore_name> -alias <your_alias_name>
-  ````
-  Where : <your_keystore_name> is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
-          <your_alias_name> is alias that you assigned to the certificate when you created it.
-  If prompted to type the password, then you should get your SHA1 fingerprint.
+    ````
+    keytool -list -v -keystore your_keystore_name -alias your_alias_name
+    ````
+  Where : __your_keystore_name__ is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
+          __your_alias_name__ is alias that you assigned to the certificate when you created it.
+  If prompted to type the password, then you should get your SHA1 fingerprints.
 
 Checkout this [tutorial](http://android-er.blogspot.in/2012/12/displaying-sha1-certificate-fingerprint.html) about it.
 
