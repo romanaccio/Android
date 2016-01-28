@@ -1,4 +1,4 @@
-# Go-Safe Mobile
+# Aidevig Mobile
 
 The mobile app provides the necessary bridge between Aidevig device and the web server. Everything flows through the services provided by the mobile device thanks to Go-Safe App.
 
