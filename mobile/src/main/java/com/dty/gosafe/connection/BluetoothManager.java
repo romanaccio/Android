@@ -9,12 +9,15 @@ package com.dty.gosafe.connection;
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
+import android.bluetooth.le.ScanCallback;
+import android.bluetooth.le.ScanResult;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
@@ -40,6 +43,7 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 import static android.support.v4.app.ActivityCompat.startActivityForResult;
@@ -97,7 +101,7 @@ public class BluetoothManager {
     /**
      *
      */
-    private BluetoothAdapter.LeScanCallback scanCallback;
+    private ScanCallback scanCallback;
 
     /**
      * The activity to which the BA is binded
@@ -247,15 +251,14 @@ public class BluetoothManager {
         // Scan for all BTLE devices.
         // The first one with the UART service will be chosen--see the code in the scanCallback.
         writeLine("Scanning for devices...");
-        adapter.startLeScan(scanCallback);
-        /*if(scanCallback ==null){
+        if(scanCallback ==null){
             initScanCallback();
         }
         if(this.adapter.getBluetoothLeScanner() == null){
             checkBluetoothConnection();
             return;
         }
-        this.adapter.startScan(scanCallback);*/
+        this.adapter.getBluetoothLeScanner().startScan(scanCallback);
     }
 
     /**
@@ -264,20 +267,38 @@ public class BluetoothManager {
      */
     public void initScanCallback() {
 
-        this.scanCallback = new BluetoothAdapter.LeScanCallback() {
-            // Called when a device is found.
+        this.scanCallback = new ScanCallback() {
             @Override
-            public void onLeScan(BluetoothDevice bluetoothDevice, int i, byte[] bytes) {
-                writeLine("Found device: " + bluetoothDevice.getName());
-                // Check if the device has the UART service.
-                if (parseUUIDs(bytes).contains(UART_UUID) && bluetoothDevice.getName()== "GO-SAFE") {
-                    // Found a device, stop the scan.
-                    adapter.startLeScan(scanCallback);
-                    writeLine("Found GO-SAFE device!");
-                    // Connect to the device.
-                    // Control flow will now go to the callback functions when BTLE events occur.
-                    gatt = bluetoothDevice.connectGatt(activity, false, callback);
+            public void onScanResult(int callbackType, ScanResult result) {
+                super.onScanResult(callbackType, result);
+                writeLine("Found device: "+result.getDevice().getName());
+                if(Objects.equals(result.getDevice().getName(), "GO-SAFE")){
+                    adapter.getBluetoothLeScanner().stopScan(scanCallback);
+                    deviceDetected = result.getDevice();
+                    isDeviceFound = true;
+                    gatt = deviceDetected.connectGatt(activity,false,callback);
+                    Log.d("Success:","Device found !");
                 }
+            }
+
+            /**
+             * Callback when batch results are delivered.
+             *
+             * @param results List of scan results that are previously scanned.
+             */
+            @Override
+            public void onBatchScanResults(List<ScanResult> results) {
+                super.onBatchScanResults(results);
+            }
+
+            /**
+             * Callback when scan could not be started.
+             *
+             * @param errorCode Error code (one of SCAN_FAILED_*) for scan failure.
+             */
+            @Override
+            public void onScanFailed(int errorCode) {
+                super.onScanFailed(errorCode);
             }
         };
     }
@@ -387,9 +408,9 @@ public class BluetoothManager {
      * @return int corresponding to the level according to the user's bracelet data
      */
     private int getLevel(String letter){
-        if("B" == letter){
+        if(Objects.equals("B", letter)){
             return 1;
-        }else if("C"== letter || "S" ==letter){
+        }else if(Objects.equals("C", letter) || Objects.equals("S", letter)){
             return 2;
         }else{
             return 0;
@@ -535,3 +556,4 @@ public class BluetoothManager {
         }
     }
 }
+

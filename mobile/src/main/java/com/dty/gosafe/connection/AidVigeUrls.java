@@ -13,5 +13,5 @@ package com.dty.gosafe.connection;
 public class AidVigeUrls {
     public static String ALERT = "http://10.10.200.105:8000/aidvige/all/";
     public static String PROFILE ="";
-    public static String STATS ="";
+    public static String STATS = "";
 }
