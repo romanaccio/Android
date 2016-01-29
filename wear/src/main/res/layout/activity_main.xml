@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016.
+  ~ Created by David Mugisha during the DTY Program
+  ~ Last Edited on 19/01/16 18:31
+  -->
+
+<android.support.wearable.view.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    tools:context="com.dty.gosafe.activity.MainActivity"
+    tools:deviceIds="wear">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        app:layout_box="all"
+        android:background="@color/dark_red">
+
+
+        <ImageButton
+            android:background="@color/accent"
+            android:layout_gravity="center|center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:src="@mipmap/ic_button"
+            android:id="@+id/button_send"
+            android:backgroundTint="@color/circular_button" />
+
+    </FrameLayout>
+
+</android.support.wearable.view.BoxInsetLayout>

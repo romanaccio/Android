@@ -1,0 +1,23 @@
+<!--
+  ~ Copyright (c) 2016.
+  ~ Created by David Mugisha during the DTY Program
+  ~ Last Edited on 19/01/16 18:31
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dty.gosafe.activity.HomeFragment"
+    android:id="@+id/map_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_map" />
+
+</LinearLayout>
