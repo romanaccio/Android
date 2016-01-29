@@ -13,7 +13,8 @@ The Wear app is just in the getting-started-stage, so if there is plenty room fo
 These applications use Gradle build system.
 First download the code by cloning this repository or downloading an archived snapshot.
 
-In Android Studio, use the **"Import non-Android Studio project"** or "Import Project" option. If prompted for a gradle configuration accept the default settings.
+
+In Android Studio, use the **"Import non-Android Studio project"** or **"Import Project"** option. If prompted for a gradle configuration accept the default settings.
 Don't forget to set the path of the keystore. The default path should change but the file must be the same
 
 ## Aidevig App
