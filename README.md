@@ -37,24 +37,9 @@ If you want to get involved in the project, send a mail to aidevig@gmail.com.
 Checkout the README.md in the mobile folder as it more concise.
 
 You will need to get a key for the Maps Android API used in the app,  via the google developer [console](https://console.developers.google.com).
-
-In other to do so : 
-
-* Go the Google Maps Android API [here](https://developers.google.com/maps/documentation/android-api/) and get the key
-* Follow the instruction
-* Once they ask you to put the [SHA1](https://en.wikipedia.org/wiki/SHA-1) fingerprint of your app, get the **release SHA1** in your android studio : 
-  * go to build -> generate signed APK
-  * Create or use existing keystore.
-  * Open terminal in android studio and type
-  ````
-  keytool -list -v -keystore your_keystore_name -alias your_alias_name
-  ````
-  Where : __your_keystore_name__ is the path and name of the keystore, including the .keystore extension for example : Users/Projects/AndroidStudioProjects/Android/keystorename.jks
-          __your_alias_name__ is alias that you assigned to the certificate when you created it.
-  If prompted to type the password, then you should get your SHA1 fingerprints.
+Follow these [instructions](https://developers.google.com/maps/documentation/android-api/signup)
   
-
-You can check in File -> Project Structure if the Signing Config and the build types are well set.
+You can check in File -> Project Structure if the the build types are well set.
 
 Checkout this [tutorial](http://android-er.blogspot.in/2012/12/displaying-sha1-certificate-fingerprint.html) about it.
 
