@@ -271,8 +271,10 @@ public class BluetoothManager {
             @Override
             public void onScanResult(int callbackType, ScanResult result) {
                 super.onScanResult(callbackType, result);
-                writeLine("Found device: "+result.getDevice().getName());
-                if(Objects.equals(result.getDevice().getName(), "GO-SAFE")){
+                // AJO : je permets plusieurs noms
+                String devName = result.getDevice().getName();
+                writeLine("Found device: "+devName);
+                if((Objects.equals(devName, "GO-SAFE"))|| (devName.toUpperCase().contains("AIDEV"))){
                     adapter.getBluetoothLeScanner().stopScan(scanCallback);
                     deviceDetected = result.getDevice();
                     isDeviceFound = true;
@@ -426,7 +428,8 @@ public class BluetoothManager {
         writeLine(braceletData.substring(1, braceletData.length()));
         writeLine(String.valueOf(braceletData.charAt(0)));
         try {
-            toSend.put("creation", DateFormat.getDateTimeInstance().format(new Date()));
+            // AJO : removing date => the date will be automatically provided by the backend
+            // toSend.put("creation", DateFormat.getDateTimeInstance().format(new Date()));
             if(mLastLocation !=null){
                 toSend.put("latitude", mLastLocation.getLatitude());
                 toSend.put("longitude", mLastLocation.getLongitude());

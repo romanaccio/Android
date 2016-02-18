@@ -11,7 +11,7 @@ package com.dty.gosafe.connection;
  * Main Routes to the back should be referenced here
  */
 public class AidVigeUrls {
-    public static String ALERT = "http://10.10.200.105:8000/aidvige/all/";
+    public static String ALERT = "http://54.93.79.193:8000/aidvige/all/";
     public static String PROFILE ="";
     public static String STATS = "";
 }
