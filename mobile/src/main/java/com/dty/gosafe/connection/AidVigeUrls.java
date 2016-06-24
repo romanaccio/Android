@@ -12,6 +12,7 @@ package com.dty.gosafe.connection;
  */
 public class AidVigeUrls {
     public static String ALERT = "http://54.93.79.193:8000/aidvige/all/";
+    // public static String ALERT = "http://aidevig.mybluemix.net/aidvige/all" ;
     public static String PROFILE ="";
     public static String STATS = "";
 }
