@@ -274,7 +274,7 @@ public class BluetoothManager {
                 // AJO : je permets plusieurs noms
                 String devName = result.getDevice().getName();
                 writeLine("Found device: "+devName);
-                if (!devName.isEmpty()) {
+                if (devName != null && !devName.isEmpty()) {
                     devName = devName.toUpperCase();
                     if ((Objects.equals(devName, "GO-SAFE")) || (devName.contains("AIDEV"))) {
                         adapter.getBluetoothLeScanner().stopScan(scanCallback);
