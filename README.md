@@ -26,14 +26,14 @@ The bracelet can monitor the pulse, detects souncs, all data which are then comb
 ### User Features 
 
 * Displays a Map with Markers from other Aidevig devices
-* Send to the server an alert launched manually or automatically by the Aidevig' Bracelet 
+* Send to the server an alert launched manually or automatically by the Aidevig' Bracelet. Note : server URL is set in java file AidVigeUrls
 * Send automatic updates
 * Manage personal profile
 * Get the device (bracelet) information
 
 ## Contributing 
 
-If you want to get involved in the project, send a mail to aidevig@gmail.com.
+If you want to get involved in the project, send a mail to aidevig.startup@gmail.com.
 
 Checkout the README.md in the mobile folder as it more concise.
 
