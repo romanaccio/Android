@@ -8,10 +8,10 @@ package com.dty.gosafe.connection;
 
 /**
  * Created by Dasha on 19/01/2016.
- * Main Routes to the back should be referenced here
+ * Main Routes to the backend should be referenced here
  */
 public class AidVigeUrls {
-    public static String ALERT = "http://54.93.79.193:8000/aidvige/all/";
+    public static String ALERT = "http://www.aidevig.fr:8000/aidvige/all/";
     // public static String ALERT = "http://aidevig.mybluemix.net/aidvige/all" ;
     public static String PROFILE ="";
     public static String STATS = "";
