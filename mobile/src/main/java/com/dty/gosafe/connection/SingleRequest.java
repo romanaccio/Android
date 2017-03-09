@@ -58,7 +58,7 @@ public class SingleRequest {
      */
     private SingleRequest(Context context, String url) {
         mCtx = context;
-        urlFinal =url;
+        urlFinal = url;
         mRequestQueue = getRequestQueue();
 
         // Default get request

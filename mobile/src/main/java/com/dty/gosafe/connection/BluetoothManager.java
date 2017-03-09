@@ -20,6 +20,7 @@ import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.location.Location;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
@@ -409,7 +410,7 @@ public class BluetoothManager {
 
     /**
      * Sets the level of the alert data sent to the Server
-     * @param letter : the first letter if the data sent by the Aidebig device
+     * @param letter : the first letter if the data sent by the Aidevig device
      * @return int corresponding to the level according to the user's bracelet data
      */
     private int getLevel(String letter){
@@ -417,7 +418,7 @@ public class BluetoothManager {
             return 1;
         }else if(Objects.equals("C", letter) || Objects.equals("S", letter)){
             return 2;
-        }else{
+        }else {
             return 0;
         }
     }
@@ -440,6 +441,10 @@ public class BluetoothManager {
             toSend.put("level", getLevel(braceletData.substring(0,1)));
             toSend.put("pulse", Integer.parseInt(braceletData.substring(1, braceletData.length())));
             toSend.put("trigger", braceletData.substring(0,1));
+            // temporary : retrieving hardcoded user_id
+            // fix this : should retrieve this id from something that can be changed on the app
+            String userIdString = this.activity.getString(R.string.personal_id);
+            toSend.put("user_id", userIdString);
         } catch (JSONException e) {
             e.printStackTrace();
         }

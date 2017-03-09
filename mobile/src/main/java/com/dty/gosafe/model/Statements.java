@@ -11,20 +11,23 @@ import java.util.Date;
 
 /**
  * Created by Dasha on 13/01/2016.
+ * this class represents a "statement", which is in fact an alert sent to the backend server
  */
 public class Statements {
     protected Date dateCreation;
     protected double latitude,longitude;
     protected int level,pulse;
     protected String trigger;
+    protected String userId;
 
-    public Statements(Date dateCreation, double latitude, double longitude, int level, int pulse, String trigger){
+    public Statements(Date dateCreation, double latitude, double longitude, int level, int pulse, String trigger, String userId){
         this.dateCreation = dateCreation;
         this.latitude = latitude;
         this.longitude = longitude;
         this.level = level;
         this.trigger = trigger;
         this.pulse = pulse;
+        this.userId = userId;
     }
 
     public int getPulse() {
@@ -52,6 +55,16 @@ public class Statements {
     public void setTrigger(String trigger) {
 
         this.trigger = trigger;
+    }
+
+    public String getUserId() {
+
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+
+        this.userId = userId;
     }
 
     public Date getDateCreation(){

@@ -11,9 +11,8 @@ package com.dty.gosafe.connection;
  * Main Routes to the backend should be referenced here
  */
 public class AidVigeUrls {
-    public static String ALERT = "http://www.aidevig.fr:8000/aidvige/all";
-    // public static String ALERT = "http://52.59.254.39:8000/aidvige/all/";
+    public static String ALERT = "http://www.aidevig.fr:8000/aidvige/all/";
     // public static String ALERT = "http://aidevig.mybluemix.net/aidvige/all" ;
-    public static String PROFILE ="";
+    public static String PROFILE ="http://www.aidevig.fr:8000/aidvige/Users/";
     public static String STATS = "";
 }

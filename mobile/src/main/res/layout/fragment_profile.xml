@@ -36,7 +36,6 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:allowUndo="false"
-            android:editable="true"
             android:layout_marginTop="@dimen/widget_margin"
             android:layout_marginBottom="@dimen/widget_margin" />
 
@@ -65,6 +64,21 @@
             android:text="@string/personal_mail"
             style="@style/Base.Widget.AppCompat.EditText"
             android:layout_marginBottom="@dimen/widget_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="@string/personal_id"
+            android:ems="10"
+            android:id="@+id/userId"
+            android:layout_below="@+id/accountEmail"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:allowUndo="false"
+            android:layout_marginBottom="@dimen/widget_margin" />
+
 
         <ImageView
             android:layout_width="match_parent"
