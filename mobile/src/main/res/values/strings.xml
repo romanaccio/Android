@@ -25,6 +25,7 @@
     <string name="personal_name">John Doe</string>
     <string name="personal_phonenumber">+33666666666</string>
     <string name="personal_mail">jdoe@aidevig.fr</string>
+    <string name="alert_mail">bestfriend@aidevig.fr</string>
     <string name="personal_id">58b8490bd7152c0b8defc5d4</string>
     <string name="imagedescription">profilepicture</string>
     <string name="image_edit_button">image_edit_button</string>

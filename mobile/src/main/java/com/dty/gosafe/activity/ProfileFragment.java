@@ -37,7 +37,7 @@ public class ProfileFragment extends Fragment {
     private String mParam2;
     private View view;
     private ImageView profilePicture;
-    private EditText accountName, accountEmail, accountPhoneNumber;
+    private EditText accountName, accountEmail, accountPhoneNumber, alertEmail;
 
     private OnFragmentInteractionListener mListener;
 
@@ -86,6 +86,7 @@ public class ProfileFragment extends Fragment {
         accountName = (EditText)view.findViewById(R.id.accountName);
         accountEmail = (EditText)view.findViewById(R.id.accountEmail);
         accountPhoneNumber = (EditText)view.findViewById(R.id.accountPhoneNumber);
+        alertEmail = (EditText)view.findViewById(R.id.alertEmail);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

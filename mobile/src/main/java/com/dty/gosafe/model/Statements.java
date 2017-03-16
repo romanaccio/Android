@@ -6,6 +6,10 @@
 
 package com.dty.gosafe.model;
 
+import android.provider.ContactsContract;
+
+import com.google.android.gms.vision.barcode.Barcode;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -19,8 +23,9 @@ public class Statements {
     protected int level,pulse;
     protected String trigger;
     protected String userId;
+    protected String alertEmail;
 
-    public Statements(Date dateCreation, double latitude, double longitude, int level, int pulse, String trigger, String userId){
+    public Statements(Date dateCreation, double latitude, double longitude, int level, int pulse, String trigger, String userId, String alertEmail){
         this.dateCreation = dateCreation;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -28,6 +33,7 @@ public class Statements {
         this.trigger = trigger;
         this.pulse = pulse;
         this.userId = userId;
+        this.alertEmail = alertEmail;
     }
 
     public int getPulse() {
@@ -65,6 +71,14 @@ public class Statements {
     public void setUserId(String userId) {
 
         this.userId = userId;
+    }
+
+    public String getAlertEmail() {
+        return this.alertEmail;
+    }
+
+    public void setAlertEmail(String alertEmail) {
+        this.alertEmail = alertEmail;
     }
 
     public Date getDateCreation(){
