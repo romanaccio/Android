@@ -65,6 +65,19 @@
             style="@style/Base.Widget.AppCompat.EditText"
             android:layout_marginBottom="@dimen/widget_margin" />
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/alertEmail"
+            android:layout_below="@+id/accountEmail"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/alert_mail"
+            style="@style/Base.Widget.AppCompat.EditText"
+            android:layout_marginBottom="@dimen/widget_margin" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,7 +85,7 @@
             android:text="@string/personal_id"
             android:ems="10"
             android:id="@+id/userId"
-            android:layout_below="@+id/accountEmail"
+            android:layout_below="@+id/alertEmail"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
