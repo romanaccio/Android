@@ -441,10 +441,15 @@ public class BluetoothManager {
             toSend.put("level", getLevel(braceletData.substring(0,1)));
             toSend.put("pulse", Integer.parseInt(braceletData.substring(1, braceletData.length())));
             toSend.put("trigger", braceletData.substring(0,1));
-            // temporary : retrieving hardcoded user_id
-            // fix this : should retrieve this id from something that can be changed on the app
-            String userIdString = this.activity.getString(R.string.personal_id);
-            toSend.put("user_id", userIdString);
+            // retrieving userId from profile panel
+            String userIdString = activity.getString(R.string.personal_id);
+            /* tentative de recuperer le champ modifiable et non la chaine initiale en dur
+            String userIdString = activity.findViewById(R.id.userId).getText().toString();*/
+            toSend.put("userId", userIdString);
+            // retrieving alertEmail from profile panel; FIX THIS : this data should be retrieved
+            // from user table in the backend not from here
+            String alertEmailString = activity.getString(R.string.alert_mail);
+            toSend.put("alertEmail", alertEmailString);
         } catch (JSONException e) {
             e.printStackTrace();
         }
